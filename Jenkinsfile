@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'openjdk:21-slim-buster' } }
+    agent { dockerfile true }
     stages {
         stage('checkout') {
             steps {
