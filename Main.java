@@ -23,8 +23,8 @@ public class Main {
                 System.out.println(funCalc.ttrpgCalc());
             } else {
                 char quit = scan.next().charAt(0);
-                scan.close();
                 if (quit == 'Q' || quit == 'q') {
+                    scan.close();
                     break;
                 } else {
                     System.out.println("Invalid input, please try again.");

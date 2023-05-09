@@ -1,5 +1,5 @@
-FROM openjdk:11
-COPY . /app
-WORKDIR /app
-RUN javac Main.java
+FROM openjdk:21-slim-buster
+COPY . .
+WORKDIR .
+RUN javac ./*.java
 CMD ["java", "Main"]
