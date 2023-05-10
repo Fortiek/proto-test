@@ -32,5 +32,10 @@ public class Main {
             }
             System.out.println("If you want to exit, enter \'Q\' in the Scanner prompt.");
         }
+
+        System.out.println("One more thing before we go, let's see if a fetch works:\n");
+
+        FetchHttp fetch = new FetchHttp();
+        fetch.run("https://icanhazdadjoke.com/");
     }
 }
