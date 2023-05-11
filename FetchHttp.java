@@ -16,11 +16,12 @@ public class FetchHttp extends Thread {
     }
 
     protected void get(String url) throws Exception {
+        String randString = Integer.toString((int)(Math.random() * 8000));
         HttpClient http = HttpClient.newHttpClient();
         HttpRequest req = HttpRequest.newBuilder()
             .uri(URI.create(url))
             .header("Accept", "text/plain")
-            .header("User-Agent", "heythere")
+            .header("User-Agent", randString)
             .build();
 
         HttpResponse<String> res = http.send(req, BodyHandlers.ofString());
